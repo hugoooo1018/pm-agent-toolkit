@@ -8,7 +8,7 @@ pm-agent-toolkit 本身是纯文本 + Python lint 脚本，没有运行时组件
 - CI 配置（`.github/workflows/validate.yml`）存在被利用风险
 - 任何可能泄露使用者 PRD 内容的行为
 
-**联系方式**：xiuqi@logic-labs.ai
+**联系方式**：hugoooo1018@users.noreply.github.com
 
 收到后 48 小时内回复，商定披露时间。
 

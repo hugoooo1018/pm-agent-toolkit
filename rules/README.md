@@ -55,4 +55,4 @@ Rule 没有固定 body 模板，但推荐含：
 - **少而精**：加 Rule 要有"这是跨场景通用原则"的明确理由，否则放 docs/
 - **单向引用**：Rule → Rule 之间可引用；Rule → Skill **从不反向引用**
 - **版本化**：break 时升主版本；加字段/补充升次版本
-- **fork 友好**：别人 fork 本仓库改成自己公司的风格时，只需改本目录 + `templates/`，`skills/` 和 `adapters/` 的绑定层不用大动
+- **fork 友好**：别人 fork 本仓库改成自己团队的风格时，只需改本目录 + `templates/`，`skills/` 和 `adapters/` 的绑定层不用大动

@@ -155,4 +155,4 @@ PRD 正文禁止出现：
 - `prd-paradigm.md` — PRD 段落写作范式（7 章骨架、L1/L2/L3、约束硬规则）
 - `prd-quality-checklist.md` — 6 维度质量判据（内容失焦 / 结构组织 / 顺序一致性 / 歧义表述 / 前后自洽 / 字段对齐）
 - `../lifecycle/states.md` — PRD 生命周期状态定义
-- `../templates/logic-labs-style/` — 可直接复制的 PRD 骨架模板
+- `../templates/default-style/` — 可直接复制的 PRD 骨架模板

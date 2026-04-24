@@ -57,7 +57,7 @@ PRD 写作前必须过一次澄清。5 维度：**背景与目标 / 用户与边
 
 准入 checklist：背景与目标（有北极星候选）/ 用户与边界（≥ 2 个场景）/ 核心逻辑 / 约束依赖 / 优先级 / SOT 确认 / 指标数据源。
 
-## PRD 范式（opinionated：logic-labs-style）
+## PRD 范式（opinionated：default-style）
 
 ### 结构层次
 

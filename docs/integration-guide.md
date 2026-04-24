@@ -41,7 +41,7 @@
 + [rules/prd-clarification.md 的 body]
 + [rules/prd-quality-checklist.md 的 body]
 + 顶部加一段说明 "你是一个 PRD Writer Agent，遵守以下原则..."
-+ 底部加一段说明 "写 PRD 时参考 templates/logic-labs-style/ 的骨架"
++ 底部加一段说明 "写 PRD 时参考 templates/default-style/ 的骨架"
 ```
 
 手动拼装即可，不需要脚本（未来若自动化可加到 `scripts/build_adapters.py`）。

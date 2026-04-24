@@ -67,7 +67,7 @@ graph LR
      → 输出"需求理解总结"
   ↓
 ② 激活 prd-paradigm skill
-     → 读 rules/prd-paradigm.md + templates/logic-labs-style/feature-prd-10-chapter.md
+     → 读 rules/prd-paradigm.md + templates/default-style/feature-prd-10-chapter.md
      → 按 10 章骨架逐章生成
   ↓ （写到"八、原型图"章节）
 ③ 激活 wireframe-generator skill

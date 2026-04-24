@@ -9,9 +9,9 @@ version: 0.2.0
 
 ## 定位
 
-本 Rule 定义**如何写 PRD 的章节内容**的规范。是一份**opinionated** 的范式，基于 logic-labs 实践沉淀，适合需要严格结构化、多人协作、长期维护的 PRD 场景。
+本 Rule 定义**如何写 PRD 的章节内容**的规范。是一份**opinionated** 的范式，基于作者个人实践沉淀，适合需要严格结构化、多人协作、长期维护的 PRD 场景。
 
-对应的**骨架模板**在 `../templates/logic-labs-style/`，可直接复制填写。
+对应的**骨架模板**在 `../templates/default-style/`，可直接复制填写。
 
 **不适合本范式的场景**：
 - 战略级 PRD（产品愿景、市场论证）
@@ -33,7 +33,7 @@ version: 0.2.0
 
 ## 7 章固定骨架（模块级）
 
-顺序不可调，编号不可变。可直接复制 `../templates/logic-labs-style/module-prd-7-chapter.md`。
+顺序不可调，编号不可变。可直接复制 `../templates/default-style/module-prd-7-chapter.md`。
 
 ```
 一、产品背景与目标
@@ -66,7 +66,7 @@ version: 0.2.0
 
 ## 10 章骨架（功能级）
 
-功能级 PRD（单一功能，非模块）用 10 章骨架。详见 `../templates/logic-labs-style/feature-prd-10-chapter.md`。
+功能级 PRD（单一功能，非模块）用 10 章骨架。详见 `../templates/default-style/feature-prd-10-chapter.md`。
 
 关键差异：
 
@@ -101,9 +101,9 @@ version: 0.2.0
 
 根据功能形态选一：
 
-- **操作型** → `../templates/logic-labs-style/L2-operational.md`
-- **页面型** → `../templates/logic-labs-style/L2-page.md`
-- **执行型** → `../templates/logic-labs-style/L2-execution.md`
+- **操作型** → `../templates/default-style/L2-operational.md`
+- **页面型** → `../templates/default-style/L2-page.md`
+- **执行型** → `../templates/default-style/L2-execution.md`
 
 ## 硬规则：Always do（每份 PRD 强制）
 
@@ -116,8 +116,8 @@ version: 0.2.0
 - 跨模块规则集中在第四章；模块内只引用不重复展开
 - Mermaid 节点文字 ≡ 正文术语（同一概念不允许两种说法）
 - 优先级只出现 P0 / P1；P2 统一塞进第七章未来规划
-- 字段命名遵守 `../templates/logic-labs-style/field-naming.md`
-- Mermaid 样式遵守 `../templates/logic-labs-style/mermaid-styles.md`
+- 字段命名遵守 `../templates/default-style/field-naming.md`
+- Mermaid 样式遵守 `../templates/default-style/mermaid-styles.md`
 
 ## 硬规则：Ask first（必须向用户确认）
 

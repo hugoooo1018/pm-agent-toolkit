@@ -12,7 +12,7 @@ reviewers:
 
 # 每日签到 PRD v1.0
 
-> 功能级 PRD，按 `templates/logic-labs-style/feature-prd-10-chapter.md` 骨架。
+> 功能级 PRD，按 `templates/default-style/feature-prd-10-chapter.md` 骨架。
 > v1.0 基于 [02-prd-v0.1.md](02-prd-v0.1.md) + [03-review-report.md](03-review-report.md) 修复后的终版。
 
 ---

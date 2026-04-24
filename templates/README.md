@@ -4,7 +4,7 @@
 
 ## Opinionated 声明
 
-当前仓库首版只提供 **logic-labs-style**，基于 logic-labs 一线 PM 实践沉淀。它有以下鲜明取向：
+当前仓库首版只提供 **default-style**，基于作者个人一线 PM 实践沉淀。它有以下鲜明取向：
 
 - 7 章模块级骨架（编号/顺序固定）
 - L1/L2/L3 三层结构
@@ -20,16 +20,16 @@
 
 ## 目录
 
-### `logic-labs-style/`
+### `default-style/`
 
-- [module-prd-7-chapter.md](logic-labs-style/module-prd-7-chapter.md) — 模块级 PRD 骨架
-- [feature-prd-10-chapter.md](logic-labs-style/feature-prd-10-chapter.md) — 功能级 PRD 骨架
-- [L2-operational.md](logic-labs-style/L2-operational.md) — 操作型功能模板
-- [L2-page.md](logic-labs-style/L2-page.md) — 页面型功能模板
-- [L2-execution.md](logic-labs-style/L2-execution.md) — 执行型功能模板
-- [field-naming.md](logic-labs-style/field-naming.md) — 字段命名规范
-- [mermaid-styles.md](logic-labs-style/mermaid-styles.md) — 架构图 / 流程图样式
-- [pitfalls.md](logic-labs-style/pitfalls.md) — 常踩坑清单（反例库）
+- [module-prd-7-chapter.md](default-style/module-prd-7-chapter.md) — 模块级 PRD 骨架
+- [feature-prd-10-chapter.md](default-style/feature-prd-10-chapter.md) — 功能级 PRD 骨架
+- [L2-operational.md](default-style/L2-operational.md) — 操作型功能模板
+- [L2-page.md](default-style/L2-page.md) — 页面型功能模板
+- [L2-execution.md](default-style/L2-execution.md) — 执行型功能模板
+- [field-naming.md](default-style/field-naming.md) — 字段命名规范
+- [mermaid-styles.md](default-style/mermaid-styles.md) — 架构图 / 流程图样式
+- [pitfalls.md](default-style/pitfalls.md) — 常踩坑清单（反例库）
 
 ## 使用方式
 
@@ -37,10 +37,10 @@
 
 ```bash
 # 模块级
-cp templates/logic-labs-style/module-prd-7-chapter.md docs/business/<module>/<module>-prd-v1.md
+cp templates/default-style/module-prd-7-chapter.md docs/business/<module>/<module>-prd-v1.md
 
 # 功能级
-cp templates/logic-labs-style/feature-prd-10-chapter.md docs/business/<module>/<feature>-prd.md
+cp templates/default-style/feature-prd-10-chapter.md docs/business/<module>/<feature>-prd.md
 ```
 
 复制后按 `rules/prd-paradigm.md` 的规则填写。
@@ -56,6 +56,6 @@ cp templates/logic-labs-style/feature-prd-10-chapter.md docs/business/<module>/<
 核心要求：
 
 1. 新建 `templates/<style-name>/` 目录
-2. 含 `README.md` 说明来源、适用场景、与 logic-labs-style 的差异
+2. 含 `README.md` 说明来源、适用场景、与 default-style 的差异
 3. 骨架文件**可直接复制**（不要只放原则说明，那是 `rules/` 的职责）
 4. 在本文件"目录"段追加入口

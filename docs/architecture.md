@@ -100,7 +100,7 @@ Layer 3 推送（lark-cli）
 实操标准：
 
 - body 有 `## Rule References` 段引用 rules/
-- 写"读 rules/prd-paradigm.md 然后按 templates/logic-labs-style/ 的骨架生成"这种绑定语句
+- 写"读 rules/prd-paradigm.md 然后按 templates/default-style/ 的骨架生成"这种绑定语句
 - 不把 Rule 原则再抄一遍
 
 ### 集成层的纯净度

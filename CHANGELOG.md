@@ -17,7 +17,7 @@
 #### 新增
 
 - `rules/prd-clarification.md`、`rules/prd-quality-checklist.md`、`rules/prd-paradigm.md`（从 skill 升格）
-- `templates/logic-labs-style/`（原本在 skills/prd-paradigm 下）
+- `templates/default-style/`（原本在 skills/prd-paradigm 下）
 - `adapters/cursor/.cursorrules`、`adapters/generic-system-prompt/*.md`
 - `integrations/lark/README.md`
 - `lifecycle/states.md`
@@ -48,7 +48,7 @@
 - 如果你 fork 了 0.1.x 版本并扩展了自己的 skill / rule，升级时需要：
   - 删除 Rule frontmatter 的 `related_skills`
   - 检查 Rule body 是否含 `/skill-name` 或 `skills/` 路径，改为抽象描述
-  - 原 `skills/prd-paradigm/templates/` 的模板路径改为 `templates/logic-labs-style/`
+  - 原 `skills/prd-paradigm/templates/` 的模板路径改为 `templates/default-style/`
 
 ---
 

@@ -38,7 +38,7 @@ Session 启动时以下 Rule 默认生效（从 [rules/](rules/) 目录加载）
   ↓
 按 rules/prd-clarification.md 做 5 维度澄清 → 输出需求理解总结
   ↓
-激活 prd-paradigm skill → 按 templates/logic-labs-style/ 的骨架展开章节
+激活 prd-paradigm skill → 按 templates/default-style/ 的骨架展开章节
   ↓（按需）
 激活 wireframe-generator skill → 生成线框图
   ↓
@@ -54,7 +54,7 @@ Session 启动时以下 Rule 默认生效（从 [rules/](rules/) 目录加载）
 ## 给 Claude 的关键指引
 
 1. **写 PRD 前必过澄清**：除非用户明说"不澄清直接写"，否则触发 `prd-clarification` 流程
-2. **章节生成用 paradigm**：`prd-paradigm` skill 会读 `templates/logic-labs-style/` 的骨架
+2. **章节生成用 paradigm**：`prd-paradigm` skill 会读 `templates/default-style/` 的骨架
 3. **产出路径由用户指定**：不要假设 `docs/business/` 这种目录结构
 4. **交付后建议下一步**：画线框图 / 找人评审 / 补 SOT / 推送飞书
 5. **`rules/` 是单向源**：改规则只改 `rules/`；`skills/` 和 `adapters/` 只引用不重抄

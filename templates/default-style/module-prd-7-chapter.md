@@ -77,7 +77,7 @@ graph TD
   style 模块B fill:#FFF3E0
 ```
 
-> 术语必须与正文一致；样式见 `templates/logic-labs-style/mermaid-styles.md`。
+> 术语必须与正文一致；样式见 `templates/default-style/mermaid-styles.md`。
 
 ### 3.2 {L1 模块 A}
 

@@ -24,13 +24,13 @@
 - **三层架构**：知识层 / 绑定层 / 集成层显式分离，互不污染
 - **跨 Agent**：`rules/` 纯粹的 PM 知识资产，可被 Claude Code / Cursor / 任意 LLM 消费
 - **端到端**：需求澄清 → 按范式生成 → 线框图 → 自检 → 独立评审 → 推送飞书，全流程闭环
-- **opinionated 但可 fork**：范式基于 logic-labs 一线 PM 实践，明确声明公司风味，便于定制
+- **opinionated 但可 fork**：范式基于作者个人一线 PM 实践，明确声明个人风味，便于定制
 
 ---
 
 ## Opinionated 声明
 
-本仓库的 PRD 范式来自 **logic-labs 实践**，有特定"公司口味"：
+本仓库的 PRD 范式来自**作者个人实践**，有特定"个人口味"：
 
 - 7 章模块级 + 10 章功能级骨架
 - L1/L2/L3 三层结构
@@ -79,7 +79,7 @@ rules/                # Agent-neutral PM 知识（核心资产）
   └─ prd-quality-checklist.md  6 维度质量判据
 
 templates/            # opinionated PRD 骨架
-  └─ logic-labs-style/         模块级 7 章 + 功能级 10 章 + L2 三形态 + 命名/样式规范
+  └─ default-style/         模块级 7 章 + 功能级 10 章 + L2 三形态 + 命名/样式规范
 
 skills/               # Claude Code 绑定层（3 个薄壳 skill）
   ├─ prd-paradigm/             按范式生成章节
@@ -149,7 +149,7 @@ Cursor 会在该项目自动加载规则。
 
 ### 如果你只想看范式骨架
 
-直接复制 [templates/logic-labs-style/](templates/logic-labs-style/) 下的模板填写。`rules/prd-paradigm.md` 讲解填写规则。
+直接复制 [templates/default-style/](templates/default-style/) 下的模板填写。`rules/prd-paradigm.md` 讲解填写规则。
 
 ---
 

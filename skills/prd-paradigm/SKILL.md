@@ -15,7 +15,7 @@ version: 0.2.0
 
 - **范式规则** → `../../rules/prd-paradigm.md`
 - **写作原则** → `../../rules/prd-writer.md`
-- **骨架模板** → `../../templates/logic-labs-style/`
+- **骨架模板** → `../../templates/default-style/`
 - **质量自检** → `../../rules/prd-quality-checklist.md`
 
 ## 触发时机
@@ -33,9 +33,9 @@ version: 0.2.0
 
 - `rules/prd-writer.md` — 角色与原则
 - `rules/prd-paradigm.md` — 范式硬规则（Always/Ask/Never）
-- `templates/logic-labs-style/module-prd-7-chapter.md` 或 `feature-prd-10-chapter.md` — 骨架
-- `templates/logic-labs-style/L2-operational.md` / `L2-page.md` / `L2-execution.md` — L2 形态模板（按需）
-- `templates/logic-labs-style/field-naming.md` / `mermaid-styles.md` — 命名与样式规范
+- `templates/default-style/module-prd-7-chapter.md` 或 `feature-prd-10-chapter.md` — 骨架
+- `templates/default-style/L2-operational.md` / `L2-page.md` / `L2-execution.md` — L2 形态模板（按需）
+- `templates/default-style/field-naming.md` / `mermaid-styles.md` — 命名与样式规范
 - 用户提供的业务对象文档（`*-business-objects.md`）若存在
 
 ### 第 2 步：确认产出位置

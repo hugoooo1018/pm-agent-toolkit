@@ -29,7 +29,7 @@
 - 编辑或删除不符合本准则的评论、commit、代码、wiki、issue 等
 - 临时或永久封禁任何违反准则的贡献者
 
-违反本准则的行为可以私信维护者 xiuqi@logic-labs.ai 报告。
+违反本准则的行为可以私信维护者 hugoooo1018@users.noreply.github.com 报告。
 
 ## 归属
 

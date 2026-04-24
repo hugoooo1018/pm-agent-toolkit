@@ -85,7 +85,7 @@ PRD 写作前必须过一次澄清。5 维度：
 
 ---
 
-## PRD 范式（opinionated: logic-labs-style）
+## PRD 范式（opinionated: default-style）
 
 ### 结构层次
 
@@ -170,4 +170,4 @@ PRD 写作前必须过一次澄清。5 维度：
 
 - opinionated 声明与 fork 指南详见仓库 `docs/opinionated.md`
 - 术语表详见 `docs/glossary.md`
-- 骨架模板可在 `templates/logic-labs-style/` 复制
+- 骨架模板可在 `templates/default-style/` 复制

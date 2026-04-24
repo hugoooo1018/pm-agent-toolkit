@@ -8,7 +8,7 @@
 |---|---|---|---|
 | 00 | [brief.md](00-brief.md) | 用户原始一句话输入 | 输入 |
 | 01 | [clarification.md](01-clarification.md) | 2 轮澄清对话 + 需求理解总结 | `rules/prd-clarification.md` |
-| 02 | [prd-v0.1.md](02-prd-v0.1.md) | 按 10 章骨架生成的初版 PRD | `rules/prd-paradigm.md` + `templates/logic-labs-style/` |
+| 02 | [prd-v0.1.md](02-prd-v0.1.md) | 按 10 章骨架生成的初版 PRD | `rules/prd-paradigm.md` + `templates/default-style/` |
 | 03 | [review-report.md](03-review-report.md) | 独立评审报告（8 个 finding） | `skills/prd-review/` |
 | 04 | [prd-final.md](04-prd-final.md) | 修完问题的终版 PRD | 作者修复后 |
 
@@ -28,7 +28,7 @@
 
 ## 不涵盖的
 
-本示例选的是**功能级 PRD（10 章）**，没演示模块级 7 章骨架。模块级的例子可参考 `templates/logic-labs-style/module-prd-7-chapter.md` 的骨架本身。
+本示例选的是**功能级 PRD（10 章）**，没演示模块级 7 章骨架。模块级的例子可参考 `templates/default-style/module-prd-7-chapter.md` 的骨架本身。
 
 ## 可复用性
 

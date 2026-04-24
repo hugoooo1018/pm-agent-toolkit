@@ -8,7 +8,7 @@ reviewers: []
 
 # 每日签到 PRD v0.1
 
-> 功能级 PRD，按 `templates/logic-labs-style/feature-prd-10-chapter.md` 骨架生成。
+> 功能级 PRD，按 `templates/default-style/feature-prd-10-chapter.md` 骨架生成。
 > 基于 [01-clarification.md](01-clarification.md) 的需求理解总结。
 
 ---

@@ -57,7 +57,7 @@ rules/prd-paradigm.md            ← 范式 Rule
 rules/prd-quality-checklist.md   ← 判据 Rule
   └─ 6 维度 + P 类原则（自检与评审共用）
 
-templates/logic-labs-style/      ← opinionated 骨架
+templates/default-style/      ← opinionated 骨架
   └─ 可直接复制的模板
 
 skills/prd-paradigm/             ← Claude Code 绑定

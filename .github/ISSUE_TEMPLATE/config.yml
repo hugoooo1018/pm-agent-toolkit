@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 使用讨论 / 方法论交流
+    url: https://github.com/hugoooo1018/pm-agent-toolkit/discussions
+    about: 不确定是不是 bug、想讨论 PRD 写作方法、想交流 fork 经验，请来 Discussions。
+  - name: 📖 先读文档
+    url: https://github.com/hugoooo1018/pm-agent-toolkit/tree/main/docs
+    about: 90% 的问题在 docs/ 里有答案。尤其是 architecture.md / opinionated.md / glossary.md。

@@ -1,0 +1,37 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Run frontmatter lint
+        run: python scripts/validate_frontmatter.py
+
+      - name: Check Rule purity (no Claude Code leaks)
+        run: |
+          set -e
+          echo "检查 rules/ 下是否含 Claude Code 残留（排除 README.md 元文档）..."
+          # 只扫描非 README 的 rule 文件
+          LEAKS=$(find rules -name '*.md' -not -name 'README.md' -exec grep -Hn 'skills/\|SKILL\.md\|/prd-review\|/prd-paradigm\|/wireframe-generator\|/prd-clarification\|/prd-self-checker' {} \; || true)
+          if [ -n "$LEAKS" ]; then
+            echo "::error::rules/ 下有 Claude Code 专属引用："
+            echo "$LEAKS"
+            exit 1
+          fi
+          echo "✓ rules/ 纯净度检查通过"

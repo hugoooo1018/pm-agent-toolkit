@@ -1,0 +1,25 @@
+{
+  "name": "pm-agent-toolkit",
+  "version": "0.2.0",
+  "description": "PM agent toolkit — three-layer architecture (knowledge / binding / integration) that produces industrial-grade PRDs. Agent-neutral rules can be consumed by Claude Code / Cursor / any LLM.",
+  "author": {
+    "name": "Hugo",
+    "email": "xiuqi@logic-labs.ai"
+  },
+  "keywords": [
+    "product-management",
+    "pm",
+    "prd",
+    "skills",
+    "rules",
+    "agent-toolkit",
+    "agent-neutral",
+    "cross-agent"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hugoooo1018/pm-agent-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugoooo1018/pm-agent-toolkit.git"
+  }
+}

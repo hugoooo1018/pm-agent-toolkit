@@ -1,0 +1,450 @@
+/* ============================================================
+ * Wireframe shared CSS (low-fidelity, greyscale)
+ *
+ * Consumers: docs/business/<module>/wireframes/*.html
+ *            static/wireframes/*.html (Docusaurus mirror)
+ *
+ * Spec: docs/business/customer/wireframes/design-system.md
+ *       .claude/skills/wireframe-generator/references/design-system.md
+ *
+ * 组件分为 4 类：
+ *   A 只读（展示数据）— 浅-中灰体系 #e8e8e8 → #d0d0d0 → #eee（表头行）→ #999；
+ *                      表头列名为纯文字（透明底 + #444）
+ *   B 交互（按钮/link/输入）— 统一深灰 #7a7a7a；危险动作 #a06060
+ *   C 静态 UI 文案（弹窗标题、form label）— 不用灰块，普通文字
+ *   D 不展示（label / 板块注释）— #f3f3f3 虚线斜体
+ *
+ * Do NOT add brand colors or non-greyscale values.
+ * ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: #444;
+  background: #f5f5f5;
+  line-height: 1.5;
+}
+
+/* === Container === */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.section { position: relative; }
+
+/* === A. 只读组件（Read-only data）=== */
+
+.wf-box {
+  background: #e8e8e8;
+  border: 1px dashed #aaa;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  text-align: center;
+}
+
+.wf-text {
+  background: #d0d0d0;
+  min-height: 22px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin: 6px 0;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.wf-text.short { width: 40%; }
+.wf-text.medium { width: 70%; }
+.wf-text.long { width: 100%; }
+
+.wf-text.heading {
+  background: #999;
+  color: #333;
+  min-height: 28px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 60%;
+  margin-bottom: 12px;
+}
+
+/* === B. 交互组件（Interactive）===
+   所有可交互元素统一用 #7a7a7a 深灰；危险动作 #a06060 语义色。 */
+
+/* link-style 字段：字段值本身可点（如品牌名→详情页） */
+.brand-name {
+  background: #7a7a7a;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  width: 75%;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 按钮：主动作 */
+.btn {
+  padding: 8px 20px;
+  background: #7a7a7a;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* 按钮：次动作（虚线边） */
+.btn.outline {
+  background: transparent;
+  border: 1px dashed #7a7a7a;
+  color: #7a7a7a;
+}
+
+.btn.small {
+  padding: 4px 10px;
+  font-size: 11px;
+}
+
+/* 按钮：危险动作（红褐语义色） */
+.btn.btn-danger {
+  background: #a06060;
+  color: #fff;
+}
+
+/* 输入框（见下方 .form-input，挂在 .wf-text 上的派生样式） */
+
+/* === D. 不展示组件（Doc-only metadata）===
+   .label：板块注释（"板块：品牌列表"等）。前端真 UI 不渲染，仅给文档读者/后端看。
+   视觉信号：虚线+斜体+最浅灰，与 A/B/C 彻底区分。 */
+.label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  background: #f3f3f3;
+  color: #777;
+  font-size: 10px;
+  line-height: 1.4;
+  border: 1px dashed #bbb;
+  border-radius: 10px;
+  font-style: italic;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* ============================================================
+ * List page primitives
+ * ============================================================ */
+
+.advertiser-card {
+  padding: 32px 24px 24px;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.list-column {
+  padding: 32px 16px 16px;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px dashed #bbb;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-card {
+  padding: 14px 16px;
+  border: 1px dashed #bbb;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.account-card {
+  padding: 14px 16px;
+  border: 1px dashed #bbb;
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;  /* 当操作区内容过宽时，让 actions 换行到下一行，避免挤坏 info 文字 */
+}
+
+.account-info { flex: 1 1 55%; min-width: 200px; }
+.account-actions { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; }
+
+/* ============================================================
+ * Detail page primitives
+ * ============================================================ */
+
+.breadcrumb {
+  padding: 28px 20px 16px;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.info-card {
+  padding: 32px 24px 24px;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.info-card-actions {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+}
+
+.table-section {
+  padding: 32px 16px 16px;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* 左侧 search-group，右侧 新增按钮 */
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px dashed #bbb;
+  flex-wrap: wrap;
+}
+
+/* 搜索框 + 搜索按钮作为一个紧凑的视觉组，不撑满整行 */
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 auto;
+}
+
+.search-group > .search-box {
+  flex: 0 0 auto;
+  width: 320px;
+  max-width: 50vw;
+  min-width: 160px;
+  margin: 0;
+}
+
+.wf-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wf-table-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr 2fr 1.2fr 120px;  /* 操作列固定窄宽，表头文字与按钮组宽度一致 */
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px dashed #bbb;
+  border-radius: 3px;
+  background: #fff;
+  align-items: center;
+}
+
+.wf-table-row .wf-text {
+  margin: 0;
+}
+
+.wf-table-row.wf-table-header-row {
+  background: #eee;
+  border-style: solid;
+  border-color: #bbb;
+}
+
+.wf-table-row.wf-table-header-row .wf-text {
+  background: transparent;
+  color: #444;
+  min-height: auto;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 600;
+}
+
+.wf-table-actions-col {
+  background: transparent;
+  color: #444;
+  min-height: auto;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;  /* 操作列已固定为 120px，header 文字居中；与下方按钮组对齐 */
+}
+
+.wf-table-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;  /* 按钮组在 120px 操作列内居中，与 header 对齐 */
+}
+
+/* ============================================================
+ * Modal / dialog primitives
+ * ============================================================ */
+
+/* overlay 用 normal flow（不是 fixed），让 AutoIframe 的 scrollHeight 自适应能算到内容 */
+.modal-overlay {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 360px;
+}
+
+.modal-dialog {
+  background: #fff;
+  padding: 32px 24px 24px;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  width: 480px;
+  max-width: 100%;
+  position: relative;
+}
+
+.modal-dialog.modal-confirm {
+  width: 400px;
+}
+
+/* === C. 静态 UI 文案（Static UI chrome）===
+   硬编码的 UI 标签，页面会渲染但不是数据，也不是交互元素本体。
+   视觉信号：不用灰块，普通文字（#333 / #555）。 */
+
+/* 弹窗标题 */
+.modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #bbb;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* 表单字段左侧 label */
+.form-label {
+  flex: 0 0 120px;
+  font-size: 12px;
+  color: #555;
+}
+
+.form-input {
+  flex: 1;
+  margin: 0;
+  min-height: 32px;
+  background: #e8e8e8;
+  border: 1px dashed #aaa;
+  color: #888;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed #bbb;
+}
+
+/* ============================================================
+ * Empty state
+ * ============================================================ */
+
+.empty-state {
+  padding: 32px 24px;
+  border: 1px dashed #bbb;
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.empty-state .empty-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.empty-state .empty-title {
+  margin: 0;
+  width: auto;
+  min-width: 120px;
+}
+
+.empty-state .wf-text.long {
+  width: 80%;
+}
+
+/* ============================================================
+ * Responsive
+ * ============================================================ */
+
+@media (max-width: 768px) {
+  .main-grid { grid-template-columns: 1fr; }
+  .account-card { flex-direction: column; align-items: stretch; }
+  .account-actions { justify-content: flex-end; }
+  .form-row { flex-direction: column; align-items: stretch; }
+  .form-label { flex: auto; }
+  .wf-table-row { grid-template-columns: 1fr; }
+  .info-card-actions { position: static; margin-bottom: 12px; }
+}

@@ -1,0 +1,86 @@
+{
+  "skill_name": "prd-review",
+  "schema_version": 1,
+  "assertion_types": {
+    "should_trigger": "Skill 必须被触发。",
+    "should_not_trigger": "Skill 不应触发。",
+    "loads_files": "Stage 0 必须 Read 列出的文件。",
+    "refuses_non_prd_content": "读完文件后内容明显不是 PRD 时必须拒绝并停止。",
+    "pauses_for_user_input": "Stage 0 step 4 必须暂停等用户回答。",
+    "emits_stage2_dialogue": "Stage 2 至少产出一批澄清问题。",
+    "produces_report_matching_template": "Stage 3 输出必须遵循 assets/report-template.md 的结构。",
+    "no_disk_writes": "不得创建或修改任何磁盘文件。",
+    "dimension_6_degraded_mode": "business-objects 缺失时必须显式声明维度 6 的降级规则。"
+  },
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我评审一下 docs/business/rule/rule-management-prd-v2.md 这份 PRD，交付前想过一遍质量——尤其关注字段名跟 business-objects 对不对得上，还有有没有模糊表述",
+      "assertions": [
+        { "type": "should_trigger" },
+        { "type": "loads_files", "paths": ["docs/business/rule/rule-management-prd-v2.md", "references/checklist.md", "docs/business/rule/rule-business-objects.md"] },
+        { "type": "emits_stage2_dialogue", "min_batches": 1, "dimension": 4 },
+        { "type": "produces_report_matching_template" },
+        { "type": "no_disk_writes" }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "/prd-review docs/business/customer/customer-management-prd.md",
+      "assertions": [
+        { "type": "should_trigger", "via": "skill_invocation" },
+        { "type": "loads_files", "paths": ["docs/business/customer/customer-management-prd.md", "references/checklist.md", "docs/business/customer/customer-business-objects.md"] },
+        { "type": "produces_report_matching_template" },
+        { "type": "no_disk_writes" }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "帮我看看这份系统架构图文档的合理性：docs/system-design/arch.md",
+      "assertions": [
+        { "type": "refuses_non_prd_content", "reason": "内容是技术架构，不是 PRD" },
+        { "type": "no_disk_writes" }
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "帮我给管理后台的通知中心新功能写一份 PRD 草稿，我需要用户故事、功能列表、业务规则这几块",
+      "assertions": [
+        { "type": "should_not_trigger", "reason": "起草需求，不是评审" }
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "评审一下 docs/business/huge/multi-module-prd.md，这份超长，1700 多行，35 个以上章节",
+      "assertions": [
+        { "type": "should_trigger" },
+        { "type": "pauses_for_user_input", "trigger": "size_threshold", "condition": "lines>1500 or sections>30" }
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "评审一下 docs/business/rule/rule-management-prd-v2.md，里面还有几个 TODO 和 TBD 没填完",
+      "assertions": [
+        { "type": "should_trigger" },
+        { "type": "pauses_for_user_input", "trigger": "wip_markers", "keywords": ["TODO", "TBD"] }
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "评审一下 docs/business/new-domain/notification-prd.md，这是新领域，business-objects 文档我还没写",
+      "assertions": [
+        { "type": "should_trigger" },
+        { "type": "loads_files", "paths": ["docs/business/new-domain/notification-prd.md", "references/checklist.md"], "missing_ok": ["docs/business/new-domain/notification-business-objects.md"] },
+        { "type": "dimension_6_degraded_mode" },
+        { "type": "produces_report_matching_template" }
+      ],
+      "files": []
+    }
+  ]
+}
